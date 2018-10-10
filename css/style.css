@@ -8,7 +8,7 @@
 
 button {
     border: none;
-    background: lightblue;
+    background: #018eb1;
     width: 150px;
     height: 50px;
     color: #fff;
@@ -19,4 +19,43 @@ button {
 .dropdown-menu {
     list-style: none;
     margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 50px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    transform: translateY(-100%);
+    transition: transform .5s ease-in-out, box-shadow .01s ease-in-out;
+}
+
+.dropdown-link {
+    text-decoration: none;
+    display: block;
+    background-color:  #f9f9f9;
+    color: #4a4a4f;
+    padding: 10px 5px;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.dropdown-link:hover {
+    color: #fff;
+    background: #a0a0a3;
+}
+
+.dropdown {
+    width: 150px;
+    position: relative;
+}
+
+.dropdown:hover button {
+    background-color: #018ec5;
+}
+
+.dropdown:hover .dropdown-menu {
+    transform: translateY(0);
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
 }
